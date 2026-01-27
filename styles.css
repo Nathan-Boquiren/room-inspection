@@ -169,7 +169,7 @@ header {
     }
 
     :has(.category:not(.selected)) > & {
-        /* pointer-events: none; */
+        pointer-events: none;
         filter: grayscale(.5) opacity(.5);
     }
 }
