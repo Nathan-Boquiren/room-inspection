@@ -4,6 +4,7 @@ import { rubric, createElement } from "./rubric.js";
 
 // DOM Elements
 
+const printBtn = document.getElementById("print-btn");
 const rubricForm = document.querySelector(".rubric");
 rubric.sections.forEach((section) => rubricForm.append(section.el));
 const scoreWrappers = {
@@ -12,7 +13,6 @@ const scoreWrappers = {
   organization: document.getElementById("organize-score"),
   feedback: document.getElementById("feedback-wrapper"),
 };
-const printBtn = document.getElementById("print-btn");
 
 rubricForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -48,6 +48,4 @@ function renderScoreWrappers(scores) {
   });
 }
 
-printBtn.addEventListener("click", () => {
-  window.print();
-});
+printBtn.addEventListener("click", () => window.print());

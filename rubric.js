@@ -40,7 +40,6 @@ class Section {
     this.max_points = section.max_points;
     this.categories = this.getCategories(section.categories);
     this.icon = section.icon;
-
     this.el = this.render();
   }
 
