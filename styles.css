@@ -254,14 +254,10 @@ header {
 }
 
 @media print {
-    @page {
-        margin: 2in 1in;
-    }
+    @page { margin: 2in 1in }
 
-    body {
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-    }
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact }
+
     body > *:not(#results-container), #results-container > *:not(#overall-score, #feedback-wrapper) {
         visibility: hidden;
         display: none;
@@ -276,13 +272,10 @@ header {
             font-size: 1.5rem;
             margin-bottom: 1rem;
         }
-        .value {
-            color: var(--accent-clr-100);
-        }
+        
+        .value { color: var(--accent-clr-100) }
 
-        #overall-score {
-            .value { font-size: 10rem; }
-        }
+        #overall-score .value { font-size: 10rem }
         
         :has(> span) {
             background-color: hsl(0 0 95);
