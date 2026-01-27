@@ -272,12 +272,12 @@ header {
         box-shadow: none;
 
         .key {
-            color: hsl(210 35 65);
+            color: var(--accent-clr-200);
             font-size: 1.5rem;
             margin-bottom: 1rem;
         }
         .value {
-            color: var(--accent-clr-200);
+            color: var(--accent-clr-100);
         }
 
         #overall-score {
