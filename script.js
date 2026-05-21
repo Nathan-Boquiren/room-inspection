@@ -1,18 +1,22 @@
 const cl = console.log;
 
-import { rubric, createElement } from "./rubric.js";
+import { rubric, rubricReady, createElement } from "./rubric.js";
 
 // DOM Elements
 
 const printBtn = document.getElementById("print-btn");
 const rubricForm = document.querySelector(".rubric");
-rubric.sections.forEach((section) => rubricForm.append(section.el));
 const scoreWrappers = {
   overall: document.getElementById("overall-score"),
   cleanliness: document.getElementById("clean-score"),
   organization: document.getElementById("organize-score"),
   feedback: document.getElementById("feedback-wrapper"),
 };
+
+(async () => {
+  await rubricReady;
+  rubric.sections.forEach((section) => rubricForm.append(section.el));
+})();
 
 rubricForm.addEventListener("submit", (e) => {
   e.preventDefault();

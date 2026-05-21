@@ -112,6 +112,6 @@ function createElement(type, classNames, innerHTML) {
 }
 
 const rubric = new Rubric();
-await rubric.create();
+const rubricReady = rubric.create();
 
-export { rubric, createElement };
+export { rubric, rubricReady, createElement };
