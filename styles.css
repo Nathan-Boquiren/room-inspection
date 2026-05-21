@@ -149,6 +149,7 @@ header {
     font-size: 1.5rem;
     font-weight: 600;
     cursor: pointer;
+    user-select: none;
     &:hover { background-color: var(--accent-clr-100) }
 
     :has(.category:not(.selected)) > & {
